@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: url(./IMG/backgrounds.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+/* ESTILO INICIO */
+.início {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.início h1 {
+    color: white;
+    font-size: calc(5vw + 5vh);
+    font-family: "Poppins", serif;
+    font-weight: 150;
+    font-style: normal;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    margin-bottom: 2rem;
+}
+
+.início img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
+
+/* *******************************************/
+/* ENDEREÇO */
+.address {
+    font-size: 2.3rem;
+    font-family: "Poppins", serif;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.address p {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.address address {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+
+/* *******************************************/
+/* ESTILO DO BOTÃO */
+.container button {
+    display: flex;
+    border: 5px solid;
+    border-radius: 50%;
+    right: 0;
+    top: 55%;
+    margin-right: 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.container button:hover {
+    background-color: gray;
+}
+
+.container p {
+    font-size: 117px;
+    background-color: bisque;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(219, 93, 47);
+    border-radius: 20px;
+    margin: 2px;
+}
+
+.container i {
+    font-size: 90px;
+    color: white;
+    display: flex;
+    top: 63%;
+    right: 0;
+    position: absolute;
+    left: 1635px;
+    animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(85%); }
+    100% { transform: translateX(0); }
+}
+
+/* *******************************************/
+/* IMAGEM, PONTINHOS E DESCRIÇÃO DA CERVEJA */
+.cerveja img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    border: 5px solid white;
+    border-radius: 100px;
+    margin: 20px auto;
+}
+
+.three-dots i {
+    color: white;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.cerveja-descrição span {
+    font-size: 2rem;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+}
+
+.cerveja-descrição {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* *******************************************/
+/* IMAGEM DA FEIJOADA, PONTINHOS E DESCRIÇÃO */
+.feijoada img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    border: 5px solid white;
+    border-radius: 100px;
+    margin: 20px auto;
+}
+
+.three-dots-02 i {
+    color: white;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.feijoada span {
+    font-size: 2rem;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+}
+
+.feijoada-descrição {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* *******************************************/
+/* PARTE RESPONSIVA */
+@media (max-width: 768px) {
+    .início h1 {
+        font-size: calc(3vw + 3vh);
+        top: 20%;
+        left: 5%;
+    }
+
+    .address {
+        font-size: 1.5rem;
+        top: 40%;
+    }
+
+    .container button {
+        top: 50%;
+    }
+
+    .cerveja img, .feijoada img {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .cerveja-descrição, .feijoada-descrição {
+        width: 100%;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .three-dots i, .three-dots-02 i {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .início h1 {
+        font-size: calc(2vw + 2vh);
+        top: 15%;
+        left: 2%;
+    }
+
+    .address {
+        font-size: 1.2rem;
+        top: 35%;
+    }
+
+    .container button {
+        top: 45%;
+    }
+
+    .cerveja img, .feijoada img {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-top: 10px;
+    }
+
+    .cerveja-descrição, .feijoada-descrição {
+        width: 100%;
+        position: static;
+        margin-top: 10px;
+    }
+
+    .three-dots i, .three-dots-02 i {
+        position: static;
+        margin-top: 10px;
+    }
+}
+p{
+    font-size: 2rem;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+}
+.lugar img{
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    border: 5px solid white;
+    border-radius: 100px;
+    margin: 20px auto;
+}
+.three-dots-03 i{
+    color: white;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+.lugar-descrição {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: center;
+}
